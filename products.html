@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="styles/style_products.css">
@@ -260,13 +261,10 @@
                         <div class="onefilterProducts">
                             <h4>pRICE</h4>
                             <form action="#">
-                                <div class="rangefilterProducts rangefilterProducts__range">
-                                    <input class="rangeLeft" type="range" min="0" max="200" value="52" step="1">
-                                    <input class="rangeRight" type="range" min="200" max="400" value="237" step="1">
-                                </div>
+                                <div id="sliderRange"></div>
                                 <div class="rangefilterProducts rangefilterProducts__result">
-                                    <output class="result" for="rangeLeft">$52</output>
-                                    <output class="result" for="rangeRight">$400</output>
+                                    <output class="result" id="rangeLeft">$52</output>
+                                    <output class="result" id="rangeRight">$400</output>
                                 </div>
                             </form>
                         </div>
@@ -624,8 +622,9 @@
             </div>
         </footer>
     </div>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/jquery-migrate-3.0.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="brand.js"></script>
 </body>
