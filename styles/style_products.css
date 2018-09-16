@@ -918,6 +918,17 @@ body {
   font-weight: 900;
   line-height: 20px;
 }
+.newArrivals .newArrivalsWrap .carousel {
+  width: 500px;
+  margin-top: 22px;
+}
+.newArrivals .newArrivalsWrap .slick-prev:before,
+.newArrivals .newArrivalsWrap .slick-next:before {
+  color: #d4d0d0;
+}
+.newArrivals .newArrivalsWrap .slick-slide img {
+  margin: 0 auto;
+}
 .newArrivals .newArrivalsWrap .breadCrumbs li {
   float: left;
 }
