@@ -1093,82 +1093,38 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-.rangefilterProducts__range {
-  margin-top: 19px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 .rangefilterProducts__result {
   margin-top: 13px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.rangefilterProducts .rangeLeft {
-  -webkit-appearance: none;
-  background-color: #f16d7f;
-  width: 131px;
-  height: 6px;
-  margin: 0;
-  background: -webkit-linear-gradient(left, #f0f0f0 0%, #f0f0f0 26%, #f16d7f 26%, #f16d7f 100%);
-}
-.rangefilterProducts .rangeLeft::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #f16d7f;
-  border-radius: 18px;
-}
-.rangefilterProducts .rangeLeft::-moz-range-track {
-  background-color: #f16d7f;
-  width: 131px;
-  height: 6px;
-  margin: 0;
-  background: -moz-linear-gradient(left, #f0f0f0 0%, #f0f0f0 26%, #f16d7f 26%, #f16d7f 100%);
-}
-.rangefilterProducts .rangeLeft::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  background: #f16d7f;
-  border-radius: 18px;
-  border-color: #f16d7f;
-}
-.rangefilterProducts .rangeRight {
-  -webkit-appearance: none;
-  background-color: #f16d7f;
-  width: 131px;
-  height: 6px;
-  margin: 0;
-  background: -webkit-linear-gradient(left, #f16d7f 0%, #f16d7f 18%, #f0f0f0 18%, #f0f0f0 100%);
-}
-.rangefilterProducts .rangeRight::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #f16d7f;
-  border-radius: 18px;
-}
-.rangefilterProducts .rangeRight::-moz-range-track {
-  background-color: #f16d7f;
-  width: 131px;
-  height: 6px;
-  margin: 0;
-  background: -moz-linear-gradient(left, #f16d7f 0%, #f16d7f 18%, #f0f0f0 18%, #f0f0f0 100%);
-}
-.rangefilterProducts .rangeRight::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #f16d7f;
-  border-radius: 18px;
-  border-color: #f16d7f;
-}
 .rangefilterProducts .result {
   color: #6f6e6e;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
+}
+.ui-slider {
+  background-color: #f0f0f0;
+}
+.ui-widget.ui-widget-content {
+  border: none;
+  height: 6px;
+  width: 262px;
+}
+.ui-widget-content .ui-state-default {
+  border: none;
+  border-radius: 18px;
+  width: 14px;
+  height: 14px;
+  background: #f16d7f;
+}
+.ui-widget-content .ui-state-default:focus {
+  outline: none;
+}
+.ui-widget-header {
+  background: #f16d7f;
 }
 .sort {
   background-color: #f3f3f3;
