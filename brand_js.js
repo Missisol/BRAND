@@ -121,6 +121,34 @@ window.onload = function() {
 };
 
 
+/**
+ * Возможность перемещения товаров в корзину мышью.
+ */
+(function($){
+  $(function(){
+
+    $('.imageOneProduct').draggable({
+      helper: 'clone',
+      revert: 'invalide',
+      opacity: 0.6,
+      stack: '.imageOneProduct',
+      zIndex: 100,
+      drag: function() {
+        $('.ui-draggable-dragging').css(
+          {'width': '120px'},
+          {'height': '200px'}
+        );
+      }
+    });
+
+    $('.userBasket').droppable({
+      activeClass: "ui-state-highlight",
+    });
+
+
+  });  
+})(jQuery);
+
 
 
 
