@@ -356,8 +356,12 @@ form .buttonSearch:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 100;
 }
-.userBasket:hover .userBasket__quantityProduct {
+.userBasket__quantityProduct {
+  display: none;
+}
+.userBasket__quantityProduct.active {
   display: block;
 }
 .userBasket__quantityProduct {
@@ -368,7 +372,6 @@ form .buttonSearch:focus {
   position: absolute;
   top: 33px;
   left: 52px;
-  display: none;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.3px;
@@ -916,6 +919,17 @@ body {
   font-size: 24px;
   font-weight: 900;
   line-height: 20px;
+}
+.newArrivals .newArrivalsWrap .carousel {
+  width: 500px;
+  margin-top: 22px;
+}
+.newArrivals .newArrivalsWrap .slick-prev:before,
+.newArrivals .newArrivalsWrap .slick-next:before {
+  color: #d4d0d0;
+}
+.newArrivals .newArrivalsWrap .slick-slide img {
+  margin: 0 auto;
 }
 .newArrivals .newArrivalsWrap .breadCrumbs li {
   float: left;

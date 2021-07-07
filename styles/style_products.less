@@ -165,81 +165,9 @@ body {
 .rangefilterProducts {
     display: flex;
 
-    &__range {
-        margin-top: 19px;
-        justify-content: center;
-    }
-
     &__result {
         margin-top: 13px;
         justify-content: space-between;
-    }
-
-    .rangeLeft {
-        -webkit-appearance: none;
-        background-color:  @colorBrand;
-        width: 131px;
-        height: 6px;
-        margin: 0;
-        background:-webkit-linear-gradient(left ,#f0f0f0 0%,#f0f0f0 26%,@colorBrand 26%, @colorBrand 100%);
-
-        &::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width:14px;
-            height:14px;
-            background:@colorBrand;
-            border-radius:18px;
-        }
-
-        &::-moz-range-track {
-            background-color:  #f16d7f;
-            width: 131px;
-            height: 6px;
-            margin: 0;
-            background:-moz-linear-gradient(left ,#f0f0f0 0%,#f0f0f0 26%,#f16d7f 26%, #f16d7f 100%);
-        }
-
-        &::-moz-range-thumb {
-            width:14px;
-            height:14px;
-            background:@colorBrand;
-            border-radius:18px;
-            border-color: @colorBrand;
-        }
-    }
-
-    .rangeRight {
-        -webkit-appearance: none;
-        background-color:  @colorBrand;
-        width: 131px;
-        height: 6px;
-        margin: 0;
-        background:-webkit-linear-gradient(left ,@colorBrand 0%,@colorBrand 18%,#f0f0f0 18%, #f0f0f0 100%);
-
-        &::-webkit-slider-thumb{
-            -webkit-appearance: none;
-            width:14px;
-            height:14px;
-            background:@colorBrand;
-            border-radius:18px;
-        }
-
-        &::-moz-range-track {
-            background-color:  #f16d7f;
-            width: 131px;
-            height: 6px;
-            margin: 0;
-            background:-moz-linear-gradient(left ,#f16d7f 0%,#f16d7f 18%,#f0f0f0 18%, #f0f0f0 100%);
-        }
-
-        &::-moz-range-thumb{
-            -webkit-appearance: none;
-            width:14px;
-            height:14px;
-            background:@colorBrand;
-            border-radius:18px;
-            border-color: @colorBrand;
-        }
     }
 
     .result {
@@ -248,6 +176,32 @@ body {
         font-weight: 400;
         line-height: 26px;
     }
+}
+
+.ui-slider {
+    background-color: #f0f0f0;
+}
+
+.ui-widget.ui-widget-content {
+    border: none;
+    height: 6px;
+    width: 262px;
+}
+
+.ui-widget-content .ui-state-default {
+    border: none;
+    border-radius: 18px;
+    width: 14px;
+    height: 14px;
+    background: @colorBrand;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.ui-widget-header {
+    background: @colorBrand;
 }
 
 .sort {

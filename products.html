@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="styles/style_products.css">
 </head>
 <body>
@@ -53,7 +56,7 @@
                         <div class="headerRight">
                             <div class="userBasket">
                                 <a href="#"><img src="images/index/basket_black.svg" alt="basket"></a>
-                                <div class="userBasket__quantityProduct">2</div>
+                                <div id="quantityProduct" class="userBasket__quantityProduct">0</div>
                                 <div class="userBasketdropDown">
                                     <div class="userBasketdropDown__triangle"></div>
                                     <div class="userBasketOneProduct">
@@ -154,6 +157,17 @@
                     <div class="headerNewArrivals">
                         <h3>New Arrivals</h3>
                     </div>
+                    <div class="carousel" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+                        <div><img src="images/product/man_product_1_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_2_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_3_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_4_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_5_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_6_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_7_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_8_min.jpg" alt="product_min"></div>
+                        <div><img src="images/product/man_product_9_min.jpg" alt="product_min"></div>
+                    </div>
                     <nav>
                         <ul class="breadCrumbs">
                             <li><a href="index.html">Home</a></li>
@@ -247,13 +261,10 @@
                         <div class="onefilterProducts">
                             <h4>pRICE</h4>
                             <form action="#">
-                                <div class="rangefilterProducts rangefilterProducts__range">
-                                    <input class="rangeLeft" type="range" min="0" max="200" value="52" step="1">
-                                    <input class="rangeRight" type="range" min="200" max="400" value="237" step="1">
-                                </div>
+                                <div id="sliderRange"></div>
                                 <div class="rangefilterProducts rangefilterProducts__result">
-                                    <output class="result" for="rangeLeft">$52</output>
-                                    <output class="result" for="rangeRight">$400</output>
+                                    <output class="result" id="rangeLeft">$52</output>
+                                    <output class="result" id="rangeRight">$400</output>
                                 </div>
                             </form>
                         </div>
@@ -265,9 +276,9 @@
                         <div class="sortBlock number"><a href="#">09</a></div>
                     </div>
                     <div class="products">
-                        <div class="oneProductWrap">
+                        <div id="1" data-name="jacket1" data-price="52.00" data-image_min_url="images/product/man_product_1_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_1.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_1.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -282,9 +293,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="2" data-name="jacket2" data-price="55.00" data-image_min_url="images/product/man_product_2_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_2.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_2.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -299,9 +310,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="3" data-name="jacket3" data-price="58.00" data-image_min_url="images/product/man_product_3_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_3.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_3.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -316,9 +327,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="4" data-name="t_shirt1" data-price="20.00" data-image_min_url="images/product/man_product_4_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_4.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_4.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -333,9 +344,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="5" data-name="t_shirt2" data-price="22.00" data-image_min_url="images/product/man_product_5_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_5.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_5.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -350,9 +361,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="6" data-name="t_shirt3" data-price="27.00" data-image_min_url="images/product/man_product_6_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_6.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_6.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -367,9 +378,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="7" data-name="shirt1" data-price="34.00" data-image_min_url="images/product/man_product_7_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_7.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_7.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -384,9 +395,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="8" data-name="shirt2" data-price="36.00" data-image_min_url="images/product/man_product_8_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_8.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_8.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -401,9 +412,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="oneProductWrap">
+                        <div id="9" data-name="shirt3" data-price="43z.00" data-image_min_url="images/product/man_product_9_min.jpg" class="oneProductWrap">
                             <a class="oneProduct" href="#">
-                                <img src="images/product/man_product_9.jpg" alt="product">
+                                <img class="imageOneProduct" src="images/product/man_product_9.jpg" alt="product">
                                 <div class="textProduct">
                                     <p>Mango  People  T-shir</p>
                                     <span>$52.00</span>
@@ -611,5 +622,11 @@
             </div>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-migrate-3.0.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="brand_jquery.js"></script>
+    <script src="brand_js.js"></script>
 </body>
 </html>

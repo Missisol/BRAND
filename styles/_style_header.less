@@ -165,13 +165,23 @@ form {
     &:hover {
         .userBasketdropDown {
             display: flex;
+            z-index: 100;
         }
 
-        .userBasket__quantityProduct {
-            display: block;
-        }
+        // .userBasket__quantityProduct {
+        //     display: block;
+        // }
     }
 }
+
+.userBasket__quantityProduct {
+    display: none;
+}
+
+.userBasket__quantityProduct.active {
+    display: block;
+}
+
 
 .userBasket__quantityProduct {
     width: 19px;
@@ -181,7 +191,7 @@ form {
     position: absolute;
     top: 33px;
     left: 52px;
-    display: none;
+    // display: block;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.3px;
